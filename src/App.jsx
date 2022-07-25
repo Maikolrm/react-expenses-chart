@@ -31,7 +31,7 @@ function App() {
           <h2>My balance</h2>
           <p>${state.balance}</p>
         </div>
-        <div>Logo</div>
+        <img src="/logo.svg" alt="Application logo" />
       </div>
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
         <h2 className="text-lg font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
