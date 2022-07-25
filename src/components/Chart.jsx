@@ -8,16 +8,10 @@ function ChartBar(props) {
   )
 }
 
-function Chart(props) {
+function Chart({ expenses }) {
   return (
     <div className="mt-4 flex gap-3">
-      <ChartBar />
-      <ChartBar />
-      <ChartBar />
-      <ChartBar />
-      <ChartBar />
-      <ChartBar />
-      <ChartBar />
+      {expenses.map(expense => <ChartBar key={expense.day} />)}
     </div>
   )
 }
