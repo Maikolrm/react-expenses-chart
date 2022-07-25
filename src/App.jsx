@@ -35,7 +35,7 @@ function App() {
       </div>
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
         <h2 className="text-lg font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
-        <Chart data={state.expenses} />
+        <Chart expenses={state.expenses} />
       </div>
     </main>
   )
