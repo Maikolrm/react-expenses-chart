@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   return (
-    <main className="m-auto w-full max-w-md">
+    <main className="m-auto w-full max-w-md font-dm-sans">
       <div className="p-6 rounded-lg bg-soft-red text-red-400 flex items-center text-white">
         <div className="flex-1">
           <h2>My balance</h2>
