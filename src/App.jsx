@@ -7,7 +7,8 @@ function App() {
   // locat state
   const [state, setState] = useState({
     balance: 921.48,
-    expenses: []
+    expenses: [],
+    monthlyExpenses: 478.33
   })
 
   // first mount
@@ -36,6 +37,16 @@ function App() {
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
         <h2 className="text-lg font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
         <Chart expenses={state.expenses} />
+        <footer className="pt-6 mt-7 border-t-4 border-cream text-mid-brown">
+          <h2 className="text-base leading-none">Total this month</h2>
+          <div className="flex items-center mt-2">
+            <h3 className="flex-1 text-2xl font-bold text-dark-brown leading-none">${state.monthlyExpenses}</h3>
+            <div>
+              <p className="font-bold text-right text-dark-brown leading-none">+2.4%</p>
+              <p className="mt-1 leading-none">from last month</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   )
