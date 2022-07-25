@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react"
 
-function ChartBar() {
-  return (
-    <div className="">
-      <div className="w-10 h-64 bg-soft-red rounded-md"></div>
-      <p className="mt-4 text-sm text-center text-mid-brown leading-none">label</p>
-    </div>
-  )
-}
+// components
+import Chart from "./components/Chart"
 
 function App() {
   // first mount
@@ -32,16 +26,8 @@ function App() {
         <div>Logo</div>
       </div>
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
-        <h2 className="text-lg font-bold text-dark-brown">Spending - Last 7 days</h2>
-        <div className="mt-4 flex justify-between">
-          <ChartBar />
-          <ChartBar />
-          <ChartBar />
-          <ChartBar />
-          <ChartBar />
-          <ChartBar />
-          <ChartBar />
-        </div>
+        <h2 className="text-lg font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
+        <Chart data={[]} />
       </div>
     </main>
   )
