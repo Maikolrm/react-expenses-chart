@@ -5,7 +5,10 @@ import Chart from "./components/Chart"
 
 function App() {
   // locat state
-  const [data, setData] = useState([])
+  const [state, setState] = useState({
+    balance: 921.48,
+    expenses: []
+  })
 
   // first mount
   useEffect(() => {
@@ -13,7 +16,7 @@ function App() {
       try {
         const response = await fetch("/data.json")
         const data = await response.json()
-        setData(data)
+        setState(prev => ({ ...prev, expenses: data }))
       } catch(e) {
         console.log(e)
       }
@@ -26,13 +29,13 @@ function App() {
       <div className="p-6 rounded-lg bg-soft-red text-red-400 flex items-center text-white">
         <div className="flex-1">
           <h2>My balance</h2>
-          <p>$921.48</p>
+          <p>${state.balance}</p>
         </div>
         <div>Logo</div>
       </div>
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
         <h2 className="text-lg font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
-        <Chart data={data} />
+        <Chart data={state.expenses} />
       </div>
     </main>
   )
