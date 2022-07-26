@@ -25,6 +25,12 @@ function App() {
     fetchData()
   }, [])
 
+  if (!state.expenses.length) return (
+    <div className="w-full flex">
+      <div className="m-auto w-10 h-10 rounded-full border-2 border-transparent border-y-soft-red animate-spin"></div>
+    </div>
+  )
+
   return (
     <main className="m-auto w-full max-w-md font-dm-sans">
       <div className="p-6 rounded-lg bg-soft-red text-red-400 flex items-center text-white">
@@ -35,7 +41,7 @@ function App() {
         <img src="/logo.svg" alt="Application logo" />
       </div>
       <div className="p-6 mt-4 bg-pale-orange rounded-lg">
-        <h2 className="text-2xl font-bold text-dark-brown leading-none">Spending - Last 7 days</h2>
+        <h2 className="text-2xl font-bold text-dark-brown leading-none">Spending - Last {state.expenses.length} days</h2>
         <Chart expenses={state.expenses} />
         <footer className="pt-6 mt-7 border-t-4 border-cream text-mid-brown">
           <h2 className="text-base leading-none">Total this month</h2>
