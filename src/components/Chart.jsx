@@ -8,8 +8,8 @@ function ChartBar(props) {
   return (
     <div className="flex-1">
       <div className="flex h-64 flex-col justify-end">
-        <div style={{ height: `${(props.expense.amount / props.total) * 100}%` }} className={`relative rounded-md ${props.unique ? "bg-cyan" : "bg-soft-red"}`}>
-          <div className="absolute top-0 -left-[10%] -translate-y-[130%] w-auto px-3 py-2 bg-dark-brown rounded-md font-bold text-xs text-center text-cream">${props.expense.amount}</div>
+        <div style={{ height: `${(props.expense.amount / props.total) * 100}%` }} className={`relative rounded-md ${props.unique ? "bg-cyan" : "bg-soft-red"} cursor-pointer group`}>
+          <div className="absolute top-0 -left-[10%] -translate-y-[130%] w-auto px-3 py-2 bg-dark-brown rounded-md font-bold text-xs text-center text-cream hidden group-hover:block">${props.expense.amount}</div>
         </div>
       </div>
       <p className="mt-4 text-sm text-center text-mid-brown leading-none">{props.expense.day}</p>
