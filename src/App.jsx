@@ -60,7 +60,7 @@ function App() {
             <img src="/logo.svg" alt="Application logo" />
           </div>
           <div className="p-6 mt-4 bg-pale-orange rounded-lg">
-            <h2 className="text-2xl font-bold text-dark-brown leading-none">Spending - Last {state.expenses.length} days</h2>
+            <h1 className="text-2xl font-bold text-dark-brown leading-none">Spending - Last {state.expenses.length} days</h1>
             <Chart />
             <footer className="pt-6 mt-7 border-t-[3px] border-cream text-mid-brown">
               <h2 className="text-base leading-none">Total this month</h2>
