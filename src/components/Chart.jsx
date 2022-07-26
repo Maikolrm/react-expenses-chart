@@ -1,3 +1,8 @@
+import { useContext } from "react"
+
+// context
+import AppState from "../AppState"
+
 // chart bar component
 function ChartBar(props) {
   return (
@@ -10,7 +15,10 @@ function ChartBar(props) {
   )
 }
 
-function Chart({ expenses }) {
+function Chart() {
+  // app state
+  const { expenses } = useContext(AppState)
+
   return (
     <div className="flex gap-3">
       {expenses.map(expense => <ChartBar key={expense.day} expense={expense} unique={expense.day == "wed"} />)}
