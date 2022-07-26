@@ -51,7 +51,7 @@ function App() {
   return (
     <AppState.Provider value={state}>
       <AppDispatch.Provider value={dispatch}>
-        <main className="m-auto w-full max-w-md font-dm-sans">
+        <main className="m-auto w-full max-w-lg font-dm-sans">
           <div className="p-6 rounded-lg bg-soft-red flex items-center">
             <div className="flex-1 text-cream">
               <h2 className="text-base leading-none">My balance</h2>
