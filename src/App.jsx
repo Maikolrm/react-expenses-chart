@@ -62,7 +62,7 @@ function App() {
           <div className="p-6 mt-4 bg-pale-orange rounded-lg">
             <h2 className="text-2xl font-bold text-dark-brown leading-none">Spending - Last {state.expenses.length} days</h2>
             <Chart />
-            <footer className="pt-6 mt-7 border-t-4 border-cream text-mid-brown">
+            <footer className="pt-6 mt-7 border-t-[3px] border-cream text-mid-brown">
               <h2 className="text-base leading-none">Total this month</h2>
               <div className="flex items-center mt-2">
                 <h3 className="flex-1 text-3xl font-bold text-dark-brown leading-none">${state.monthlyExpenses}</h3>
