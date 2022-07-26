@@ -52,10 +52,10 @@ function App() {
     <AppState.Provider value={state}>
       <AppDispatch.Provider value={dispatch}>
         <main className="m-auto w-full max-w-md font-dm-sans">
-          <div className="p-6 rounded-lg bg-soft-red text-red-400 flex items-center text-white">
-            <div className="flex-1">
-              <h2>My balance</h2>
-              <p>${state.balance}</p>
+          <div className="p-6 rounded-lg bg-soft-red flex items-center">
+            <div className="flex-1 text-cream">
+              <h2 className="text-base leading-none">My balance</h2>
+              <p className="mt-2 text-2xl font-bold leading-none">${state.balance}</p>
             </div>
             <img src="/logo.svg" alt="Application logo" />
           </div>
